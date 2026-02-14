@@ -215,11 +215,12 @@ body{
   margin-top: 70px;
 }
 .sec-choose{
-  background-color:#fff7f0;
-  padding: 20px 20px;
+  background-color:rgb(7, 7, 95);
+  padding: 30px 20px;
+  padding-top: 0px;
   border: none;
   border-radius: 10px;
-  color:black;
+  color:rgb(7, 7, 95);
 }
 .charge-icon{
   width: 28px;
@@ -229,7 +230,13 @@ body{
   text-align: center;
   margin-top: 60px;
   font-size:50px ;
+  color:white;
+  padding-top: 20px;
+}
+.racos-family{
+  text-align: center;
   color: rgb(7, 7, 95);
+  font-size: 35px;
 }
 .transparent-div h1{
   color: rgb(7, 7, 95);
@@ -862,4 +869,5 @@ display: none;
   width: 100%;
   text-align: center;
 }
+
 }
