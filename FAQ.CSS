@@ -1,0 +1,561 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+.FAQ{
+  padding-top: 70px;
+  text-align: center;
+  width: 100%;
+}
+.FAQ h1{
+  font-size:60px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  margin-top: 40px;
+  color: rgb(7, 7, 95);
+}
+.FAQ button{
+  padding: 15px 60px;
+  margin-right:80px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  background: rgb(7, 7, 95);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+.FAQ button{
+  padding: 15px 60px;
+  margin-left:80px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  background: rgb(7, 7, 95);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.FAQ button:hover{
+  background-color: black;
+}
+.FAQ button:hover{
+  background-color: black;
+}
+.FAQ button:active{
+  background-color: #0f0e0e;
+}
+.FAQ button:active{
+  background-color: #1b15108e;
+}
+
+.tab{
+  overflow: hidden;
+  margin-top: 120px;
+  
+}
+.tabcontent{
+  display: block;
+  padding:6px 12px;
+  text-align:center;
+  background-color: #fff7f0;
+  margin-top: 10px;
+  
+}
+.tabcontent-one{
+  display: block;
+  padding:6px 12px;
+  text-align:center;
+  background-color: #fff7f0;
+  margin-top: 10px;
+}
+.tabcontent h1{
+  font-size: 40px;
+}
+.tabcontent-one h1{
+  font-size: 40px;
+}
+.Options{
+  color: rgba(21, 21, 114, 0.833);
+}
+.accordion {
+  text-align: start;
+  color: rgb(7, 7, 95);
+  cursor: pointer;
+  background-color: white;
+  padding: 18px;
+  box-shadow: rgba(245, 245, 248, 0.941);
+  border-radius: 10px;
+  border-top: 2px solid whitesmoke;
+  width: 80%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 400;
+  transition: 0.4s;
+  
+}
+.spacepan-div{
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.active, .accordion:hover {
+  background-color:white; 
+}
+
+.panel {
+  padding: 0px;
+  display: none;
+  width: 80%;
+  font-size: 17px;
+  color: rgb(7, 7, 95);
+  margin-left: 125px;
+  text-align: start;
+  border-bottom: 2px solid whitesmoke;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.panel p{
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 4px;
+  width: 4px;
+  margin-left: 10px;
+  align-items: start;
+  background-color:black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.ICON-S{
+  margin-left: 550px;
+}
+.ICON-2{
+  margin-left: 500px;
+}
+.ICON-3{
+  margin-left:870px;
+}
+.differ{
+  padding-bottom: 20px;
+  width: 100%;
+  border-bottom: 1px solid rgb(185, 201, 249);
+}
+
+@media(max-width:600px){
+  .dot {
+  cursor: pointer;
+  height: 3px;
+  width: 3px;
+  margin-left: 0px;
+  align-items: start;
+  background-color:black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.panel p{
+  font-weight: 400;
+  font-size: 14px;
+}
+  .panel {
+  padding: 0 px;
+  display: none;
+  width: 80%;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(7, 7, 95);
+  margin-left: 40px;
+  text-align: start;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+  .accordion{
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .ICON-S{
+  margin-left: 97%;
+  text-align: center;
+}
+.ICON-2{
+  margin-left: 97%;
+  text-align: center;
+}
+.ICON-3{
+  margin-left:97%;
+  text-align: center;
+}
+  .tabcontent{
+  display: block;
+  width: 100%;
+  padding:6px 12px;
+  text-align:center;
+  background-color: #fff7f0;
+  margin-top: 10px;
+  
+}
+  .tabcontent-one{
+  display: block;
+  width: 100%;
+  padding:6px 12px;
+  text-align:center;
+  background-color: #fff7f0;
+  margin-top: 10px;
+  
+}
+  .FAQ h1{
+  font-size:25px;
+  font-weight: bold;
+  color: rgb(7, 7, 95);
+}
+.FAQ{
+  padding-top: 90px;
+}
+.FAQ button{
+  padding: 13px 20px;
+  margin: 0px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 12px;
+  background: rgb(7, 7, 95);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+.tab{
+  margin-top:50px;
+}
+.tabcontent h1{
+  font-size: 21px;
+}
+.tabcontent{
+  margin-top: 10px;
+}
+.tabcontent-one h1{
+  font-size: 21px;
+}
+.tabcontent-one{
+  margin-top: 10px;
+}
+}
+
+
+@media(max-width:768px){
+  .dot {
+  cursor: pointer;
+  height: 3px;
+  width: 3px;
+  margin-left: 0px;
+  align-items: start;
+  background-color:black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+  .panel {
+  padding: 0 px;
+  display: none;
+  width: 80%;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(7, 7, 95);
+  margin-left: 40px;
+  text-align: start;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.panel p{
+  font-weight: 400;
+  font-size: 14px;
+}
+  .accordion{
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .ICON-S{
+  margin-left: 97%;
+  text-align: center;
+}
+.ICON-2{
+  margin-left: 97%;
+  text-align: center;
+}
+.ICON-3{
+  margin-left:97%;
+  text-align: center;
+}
+  .tabcontent{
+  display: block;
+  width: 100%;
+  padding:6px 12px;
+  text-align:center;
+  background-color: #fff7f0;
+  margin-top: 10px;
+  
+}
+  .tabcontent-one{
+  display:block;
+  width: 100%;
+  padding:6px 12px;
+  text-align:center;
+  background-color: #fff7f0;
+  margin-top: 10px;
+  
+}
+  .FAQ h1{
+  font-size:25px;
+  font-weight: bold;
+  color: rgb(7, 7, 95);
+}
+.FAQ{
+  padding-top: 90px;
+}
+.FAQ button{
+  padding: 13px 20px;
+  margin: 0px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 12px;
+  background: rgb(7, 7, 95);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+.tab{
+  margin-top:50px;
+}
+.tabcontent h1{
+  font-size:21px;
+}
+.tabcontent{
+  margin-top: 10px;
+}
+.tabcontent-one h1{
+  font-size: 21px;
+}
+.tabcontent-one{
+  margin-top: 10px;
+}
+}
+
+
+@media(max-width:920px){
+  .dot {
+  cursor: pointer;
+  height: 3px;
+  width: 3px;
+  margin-left: 0px;
+  align-items: start;
+  background-color:black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+  .panel {
+  padding: 0 px;
+  display: none;
+  width: 80%;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(7, 7, 95);
+  margin-left: 40px;
+  text-align: start;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.panel p{
+  font-weight: 400;
+  font-size: 14px;
+}
+  .accordion{
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .ICON-S{
+  margin-left: 97%;
+  text-align: center;
+}
+.ICON-2{
+  margin-left: 97%;
+  text-align: center;
+}
+.ICON-3{
+  margin-left:97%;
+  text-align: center;
+}
+  .tabcontent{
+  display: block;
+  width: 100%;
+  padding:6px 12px;
+  text-align:center;
+  background-color: #fff7f0;
+  margin-top: 10px;
+  
+}
+  .tabcontent-one{
+  display: block;
+  width: 100%;
+  padding:6px 12px;
+  text-align:center;
+  background-color: #fff7f0;
+  margin-top: 10px;
+  
+}
+  .FAQ h1{
+  font-size:25px;
+  font-weight: bold;
+  color: rgb(7, 7, 95);
+}
+.FAQ{
+  padding-top: 90px;
+}
+.FAQ button{
+  padding: 13px 20px;
+  margin: 0px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 12px;
+  background: rgb(7, 7, 95);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+.tab{
+  margin-top:50px;
+}
+.tabcontent h1{
+  font-size:21px;
+}
+.tabcontent{
+  margin-top: 10px;
+}
+.tabcontent-one h1{
+  font-size: 21px;
+}
+.tabcontent-one{
+  margin-top: 10px;
+}
+}
+@media(max-width:980px){
+  .dot {
+  cursor: pointer;
+  height: 3px;
+  width: 3px;
+  margin-left: 0px;
+  align-items: start;
+  background-color:black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+  .panel {
+  padding: 0 px;
+  display: none;
+  width: 80%;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(7, 7, 95);
+  margin-left: 40px;
+  text-align: start;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.panel p{
+  font-weight: 400;
+  font-size: 14px;
+}
+  .accordion{
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .ICON-S{
+  margin-left: 97%;
+  text-align: center;
+}
+.ICON-2{
+  margin-left: 97%;
+  text-align: center;
+}
+.ICON-3{
+  margin-left:97%;
+  text-align: center;
+}
+  .tabcontent{
+  display: block;
+  width: 100%;
+  padding:6px 12px;
+  text-align:center;
+  background-color: #fff7f0;
+  margin-top: 10px;
+  
+}
+  .tabcontent{
+  display: block;
+  width: 100%;
+  padding:6px 12px;
+  text-align:center;
+  background-color: #fff7f0;
+  margin-top: 10px;
+  
+}
+  .FAQ h1{
+  font-size:25px;
+  font-weight: bold;
+  color: rgb(7, 7, 95);
+}
+.FAQ{
+  padding-top: 90px;
+}
+.FAQ button{
+  padding: 13px 20px;
+  margin: 0px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 12px;
+  background: rgb(7, 7, 95);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+.tab{
+  margin-top:50px;
+}
+.tabcontent h1{
+  font-size: 21px;
+}
+.tabcontent{
+  margin-top: 10px;
+}
+.tabcontent-one h1{
+  font-size: 21px;
+}
+.tabcontent-one{
+  margin-top: 10px;
+}
+}

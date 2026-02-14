@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="APPLICATIONFOAM.CSS">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Loan Application Form</title>
+</head>
+<body>
+          <!--------first section--------->
+        <section class="header">
+            <nav>
+               <a href="header-image"><img src="REAL.jpeg"></a>
+                <div class="nav-links" id="navlinks">
+                   <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                      <div class="straight">
+                        <LI class="home"><a href="index.html" class="active">Home</a></LI>
+                      </div>
+                        <div class="straight">
+                        <LI class="nav__menu-item">
+                          <a class="" href="">Products</a>
+                          <svg class="chev" viewBox="0 0 25 20" fill="none" stroke="currentColor" stroke-width="5"
+                          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                          <ul class="nav__submenu">
+                           <li class="nav__submenu-item"><a class="car-loan" href="carloan.html">Car loans</a></li>
+                           <li class="nav__submenu-item"><a href="SMELOANS.html">SME loans</a></li>
+                           <li class="nav__submenu-item"><a href="Businessloans.html">Business loans</a></li>
+                           <li class="nav__submenu-item"><a href="Personal.html">Personal loans</a></li>
+                            </ul>
+                        </LI>
+                        </div>
+                        <div class="straight">
+                        <LI class="nav__menu-item">
+                          <a href="">Company</a>
+                           <svg class="chev" viewBox="0 0 25 20" fill="none" stroke="currentColor" stroke-width="5"
+                          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                           <ul class="nav__submenu">
+                           <li class="nav__submenu-item"><a href="Campany.html" target="_parent">About Us</a></li>
+                           <li class="nav__submenu-item"><a href="Campany.html" target="_parent">OurValues</a></li>
+                           <li class="nav__submenu-item"><a href="Campany.html" target="_parent">Choose us</a></li>
+                            <li class="nav__submenu-item"><a href="Campany.html" target="_parent">Our Team</a></li>
+                           <li class="nav__submenu-item"><a href="Campany.html" target="_parent">Review</a></li>
+                            </ul>
+                        </LI>
+                        </div>
+                        <div class="straight">
+                        <LI class="nav__menu-item">
+                          <a href="">Resources</a>
+                            <svg class="chev" viewBox="0 0 25 20" fill="none" stroke="currentColor" stroke-width="5"
+                          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                          <ul class="nav__submenu">
+                           <li class="nav__submenu-item"><a href="FAQ.HTML">FAQ</a></li>
+                           <li class="nav__submenu-item"><a href="privacy.html">Privacy & Terms</a></li>
+                            </ul>
+                        </LI>
+                        </div>
+                        <div class="straight">
+                        <LI><a class="contact" href="APPLICATIONFOAM.HTML">Contact</a></LI>
+                        </div>
+                    </ul>
+                </div>
+              <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+        </section>
+         
+       <div class="assist-us">
+        <h2>Get in Touch with Us.</h2>
+        <P>We’re always ready to assist you!</P>
+       </div>
+        <!------form section--------->
+        <section class="deform"> 
+     <div class="form-container">
+        <div class="form-header">
+            <h1>Leave a message for us</h1>
+            <p>Fill out the form below to reach our customer service.</p>
+        </div>
+        
+        <div class="success-message" id="successMessage">
+            Thank you! Your loan application has been submitted successfully.
+        </div>
+        
+        <form action="https://formspree.io/f/mzdapplz" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">First Name <span class="required"></span></label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    <div class="error-message" id="firstNameError">Please enter your first name</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastName">Your Name <span class="required"></span></label>
+                    <input type="text" id="lastName" name="lastName" required>
+                    <div class="error-message" id="lastNameError">Please enter your name</div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address <span class="required"></span></label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="emailError">Please enter a valid email address</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number <span class="required"></span></label>
+                <input type="tel" id="phone" name="phone" required>
+                <div class="error-message" id="phoneError">Please enter a valid phone number</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="loanType">Loan Type <span class="required"></span></label>
+                <select id="loanType" name="loanType" required>
+                    <option value="">Select a loan type</option>
+                    <option value="sme">SME Loan</option>
+                    <option value="personal">Personal Loan</option>
+                    <option value="business">Business Loan</option>
+                    <option value="car">Car Loan</option>
+                </select>
+                <div class="error-message" id="loanTypeError">Please select a loan type</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Your Message <span class="required"></label>
+                <textarea id="message" name="message" placeholder="Please enter the details of your message. A member of our support team will respond as soon as possible." required></textarea>
+                <div class="error-message" id="messageError">Please enter your message</div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+    </div>
+        </section>
+     <div class="discuss-div">
+            <div>
+                <h2>
+                   Connect with us
+                </h2>
+                <p>We’d love to hear from you or assist you if needed.</p>
+                <button class="button-now">
+                  <a href="tel:+2348100039136" target="_parent"><i class="fa fa-phone"></i> Call now</a>
+                </button>
+                <button class="button-just">
+                 <a href="https://wa.link/85f6cg" target="_parent">
+                  <i class="fa fa-whatsapp"></i> Chat now</a>
+                </button>
+            </div>
+            </div>
+
+        <!------last section------->
+        <section class="last-sec">
+          <div class="row-sec">
+            <div>
+              <img class="last-image" src="BLACK LOGO Image 2026-02-12 at 2.48.46 PM.jpeg">
+              <p class="make-pag">
+                We’re here to make borrowing <br> and help you take control of<br> your financial future with confidence.
+              </p>
+              <p class="fa-paraghraph">
+              <a>
+                <i class="fa fa-facebook-square"></i>
+              </a>
+              <a>
+                <i class="fa fa-instagram" ></i>
+              </a>
+              <a>
+                <i class="fa fa-twitter-square"></i>
+              </a>
+              <a  href="https://wa.link/85f6cg" target="_parent">
+                <i class="fa fa-whatsapp"></i>
+              </a>
+              </p>
+            </div>
+            <div class="useful-div">
+              <div class="about-div">
+                <h1>Top Products</h1>
+                <p>
+                <a href="carloan.html">Car Loans</a>
+                </p>
+                <p>
+                <a href="Businessloans.html">S.A Loans</a>
+                </p>
+                <p>
+                <a href="SMELOANS.html">SME Loans</a>
+                </p>
+                <P>
+                <a href="Businessloans.html">Vendor FastCash</a>
+                </P>
+                <P>
+                <a href="Personal.html">Personal Loans</a>
+                </P>
+                <p>
+                  <a href="Businessloans.html">Business Loans</a>
+                </p>
+              </div>
+              <div>
+              <h1>Useful Links</h1>
+              <p>
+              <a href="Campany.html">About Us</a>
+              </p>
+              <p>
+              <a href="privacy.html">Privacy Policy</a>
+              </p>
+              <p>
+              <a href="term-condition.html">Terms & Conditions</a>
+              </p>
+              </div>
+            </div>
+            <div class="useful">
+              <h1>Contact Us</h1>
+              <p>
+              <a><i class="fa fa-phone"></i> +2348100039136
+                </a>
+              </p>
+              <p>
+             <a><i class="fa fa-envelope-open-o"></i> racoscapital@gmail.com
+              </a>
+              </p>
+              <p>
+              <a><i class="fa fa-map-marker"></i> Opposite Apple Gate Suite Maigero,Kaduna</a>
+              </p>
+             <p>
+              <a><i class="fa fa-map-marker"></i> Ekrejebor By Kess College Street,Ughelli Town,Delta State</a>
+               </p>
+            </div>
+          </div>
+        </section>
+        
+                 <div class="copy-div">
+                <div>
+                 <p>
+                  Copyright<i class="fa fa-copyright"></i> 2026 Racos Capitals Ltd. All Rights Reserved.
+                </p>
+                </div>
+            </div>
+        <!--------javascript for toggle menu----------->
+        <script>
+
+            var navlinks = document.getElementById("navlinks")
+            function showMenu(){
+                navlinks.style.right = "0";
+            }
+            function hideMenu(){
+            navlinks.style.right = "-100%";
+            }
+            
+    // Accordion (product toggle) behavior: multi-open by default
+    (function () {
+      const list = document.getElementById('accordionList');
+      const items = Array.from(list.querySelectorAll('.acc-item'));
+      items.forEach((item, idx) => {
+        const LI = item.querySelector('.toggle-btn');
+        const panel = item.querySelector('.acc-panel');
+        const panelId = LI.getAttribute('aria-controls');
+        // link aria-labelledby for screen readers
+        panel.setAttribute('aria-labelledby', LI.id || '');
+        // ensure hidden by default
+        panel.hidden = true;
+        panel.setAttribute('aria-hidden', 'true');
+
+        // click toggle
+        btn.addEventListener('click', (e) => {
+          const isOpen = LI.getAttribute('aria-expanded') === 'true';
+          if (isOpen) {
+            // close
+            LI.setAttribute('aria-expanded', 'false');
+            panel.setAttribute('aria-hidden', 'true');
+            // collapse smoothly
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            requestAnimationFrame(() => {
+              panel.style.maxHeight = '0px';
+              panel.classList.remove('open');
+            });
+            const handler = (ev) => {
+              if (ev.propertyName && ev.propertyName.indexOf('max-height') === -1) return;
+              panel.hidden = true;
+              panel.removeEventListener('transitionend', handler);
+            };
+            panel.addEventListener('transitionend', handler);
+          } else {
+            // open
+            LI.setAttribute('aria-expanded', 'true');
+            panel.hidden = false;
+            panel.setAttribute('aria-hidden', 'false');
+            const full = panel.scrollHeight;
+            panel.style.maxHeight = full + 'px';
+            panel.classList.add('open');
+          }
+        });
+
+        // keyboard support on button
+        LI.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            LI.click();
+          }
+        });
+      });
+    })();
+        </script>
+
+    <script>
+        document.getElementById('loanForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Reset error messages
+            const errorElements = document.querySelectorAll('.error-message');
+            errorElements.forEach(el => el.style.display = 'none');
+            
+            // Get form values
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const loanType = document.getElementById('loanType').value;
+            const message = document.getElementById('message').value.trim();
+            
+            let isValid = true;
+            
+            // Validate First Name
+            if (!firstName) {
+                document.getElementById('firstNameError').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate Last Name (now "Your Name")
+            if (!lastName) {
+                document.getElementById('lastNameError').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate Email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailRegex.test(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate Phone (now required)
+            if (!phone || !/^\+?[\d\s\-\(\)]{10,}$/.test(phone)) {
+                document.getElementById('phoneError').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate Loan Type
+            if (!loanType) {
+                document.getElementById('loanTypeError').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate Message (now required)
+            if (!message) {
+                document.getElementById('messageError').style.display = 'block';
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Show success message
+                document.getElementById('successMessage').style.display = 'block';
+                
+                // Reset form
+                this.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('successMessage').style.display = 'none';
+                }, 5000);
+            }
+        });
+        
+        // Real-time validation for better UX
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                validateField(this);
+            });
+        });
+        
+        function validateField(field) {
+            const fieldName = field.name;
+            const errorElement = document.getElementById(fieldName + 'Error');
+            
+            if (!errorElement) return;
+            
+            switch(fieldName) {
+                case 'firstName':
+                    if (!field.value.trim()) {
+                        errorElement.style.display = 'block';
+                    } else {
+                        errorElement.style.display = 'none';
+                    }
+                    break;
+                case 'lastName':
+                    if (!field.value.trim()) {
+                        errorElement.style.display = 'block';
+                    } else {
+                        errorElement.style.display = 'none';
+                    }
+                    break;
+                case 'email':
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!field.value.trim() || !emailRegex.test(field.value.trim())) {
+                        errorElement.style.display = 'block';
+                    } else {
+                        errorElement.style.display = 'none';
+                    }
+                    break;
+                case 'phone':
+                    if (!field.value.trim() || !/^\+?[\d\s\-\(\)]{10,}$/.test(field.value.trim())) {
+                        errorElement.style.display = 'block';
+                    } else {
+                        errorElement.style.display = 'none';
+                    }
+                    break;
+                case 'loanType':
+                    if (!field.value) {
+                        errorElement.style.display = 'block';
+                    } else {
+                        errorElement.style.display = 'none';
+                    }
+                    break;
+                case 'message':
+                    if (!field.value.trim()) {
+                        errorElement.style.display = 'block';
+                    } else {
+                        errorElement.style.display = 'none';
+                    }
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
+

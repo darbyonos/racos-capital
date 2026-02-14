@@ -1,0 +1,624 @@
+<!---
+  <button aria-expanded="false" aria-controls="panel" id="toggleBtn" onclick="toggle()">
+  <span class="sr-only">Toggle panel</span>
+  <!-- SVG chevron 
+  <p>Product</p><svg class="chev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <polyline points="6 9 12 15 18 9"></polyline>
+  </svg>
+</button>
+  <div>
+    <p>SME LOANS</p>
+    <p>PERSONAL LOANS</p>
+    <p>CAR LOANS</p>
+  </div>
+
+<style>
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  button { background: transparent; border: none; cursor: pointer; color: #111; display: inline-flex; align-items:center; }
+  .chev { transition: transform 0.18s ease; }
+  /* when expanded rotate chevron 180deg */
+  button[aria-expanded="true"] .chev { transform: rotate(180deg); }
+</style>
+
+<script>
+  function toggle() {
+    const btn = document.getElementById('toggleBtn');
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    // optionally open/close controlled panel...
+  }
+</script>
+--->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Orange Capitals — Components Recreation</title>
+  <meta name="description" content="Recreation of header, hero, product toggle and contact form components inspired by OrangeCapitalsLimited." />
+  <style>
+     .nav-links ul li { width: 100%; justify-content: space-between; }
+    :root{
+      --orange: #ff7a00;
+      --orange-600: #ff6a00;
+      --bg: #fbfdff;
+      --muted: #6b7280;
+      --card: #ffffff;
+      --shadow: 0 10px 30px rgba(16,24,40,0.08);
+      --radius: 12px;
+      --max-width: 1100px;
+      --glass: rgba(255,255,255,0.6);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#f7fbff 0%, #fbfdff 100%);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:28px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .site {
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    /* HEADER */
+    header.site-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:12px 16px;
+      border-radius:14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.7));
+      box-shadow: var(--shadow);
+      position:sticky;
+      top:12px;
+      backdrop-filter: blur(6px);
+      z-index:20;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:inherit;
+    }
+    .brand .logo {
+      width:44px;
+      height:44px;
+      border-radius:8px;
+      background:linear-gradient(135deg,var(--orange), #ff9b4d);
+      display:inline-grid;
+      place-items:center;
+      color:white;
+      font-weight:700;
+      box-shadow: 0 4px 12px rgba(255,122,0,0.18);
+      flex-shrink:0;
+    }
+    .brand .title {
+      display:flex;
+      flex-direction:column;
+      line-height:1;
+    }
+    .brand .title .name { font-weight:700; font-size:15px; }
+    .brand .title .tag { font-size:12px; color:var(--muted); }
+
+    nav.main-nav{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    nav.main-nav a{
+      text-decoration:none;
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:8px;
+      font-weight:600;
+    }
+    nav.main-nav a[aria-current="page"]{
+      color:var(--orange);
+      background:linear-gradient(90deg, rgba(255,122,0,0.08), rgba(255,122,0,0.03));
+    }
+
+    .cta {
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+    }
+    .btn {
+      padding:8px 12px;
+      border-radius:10px;
+      border: none;
+      cursor:pointer;
+      font-weight:700;
+      font-size:14px;
+    }
+    .btn-primary {
+      background: linear-gradient(180deg, var(--orange), var(--orange-600));
+      color: white;
+      box-shadow: 0 6px 20px rgba(255,122,0,0.16);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--muted);
+    }
+
+    /* Mobile nav toggle */
+    .mobile-toggle {
+      display:none;
+      background:transparent;
+      border:none;
+      padding:6px;
+      border-radius:8px;
+    }
+
+    /* HERO */
+    .hero {
+      margin-top:18px;
+      border-radius:14px;
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:20px;
+      align-items:center;
+      padding:28px;
+      background: linear-gradient(180deg,#ffffff,#fffaf7);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-left h1{
+      margin:0 0 12px 0;
+      font-size:32px;
+      line-height:1.05;
+    }
+    .hero-left p { margin:0 0 18px 0; color:var(--muted); font-size:15px; max-width:64ch; }
+
+    .hero-ctas { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+    .hero-figure {
+      border-radius:12px;
+      background:linear-gradient(180deg,#fff7f0,#fff3e8);
+      padding:16px;
+      display:grid;
+      gap:12px;
+      box-shadow: 0 8px 28px rgba(255,122,0,0.06);
+    }
+    .stats {
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .stat {
+      background:white;
+      padding:12px;
+      border-radius:10px;
+      min-width:120px;
+      text-align:center;
+      box-shadow: 0 6px 18px rgba(2,6,23,0.03);
+    }
+    .stat .num{ font-weight:700; color:var(--orange); font-size:18px; }
+    .stat .lbl{ font-size:13px; color:var(--muted); }
+
+    /* Components area: product toggle + contact form */
+    .components {
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:20px;
+    }
+
+    /* PRODUCT TOGGLE (accordion) */
+    .accordion {
+      background:var(--card);
+      border-radius:12px;
+      padding:14px;
+      border:1px solid #f0f0f2;
+    }
+    .acc-header {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:8px;
+    }
+    .acc-list { display:grid; gap:10px; }
+
+    .acc-item {
+      border-radius:10px;
+      overflow:hidden;
+      border:1px solid #f3f4f6;
+      background: linear-gradient(180deg,#fff,#fbfdff);
+    }
+    .acc-item .row {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:12px;
+    }
+    .acc-item .title { font-weight:700; }
+    .chev { width:18px; height:18px; color:var(--orange); transition:transform .22s ease; flex-shrink:0; }
+    .toggle-btn[aria-expanded="true"] .chev { transform: rotate(180deg); }
+
+    .acc-panel {
+      padding:0 12px 12px 12px;
+      overflow:hidden;
+      max-height:0;
+      opacity:0;
+      transition: max-height 240ms ease, opacity 160ms ease;
+    }
+    .acc-panel.open { max-height:600px; opacity:1; padding-top:12px; }
+
+    /* CONTACT FORM */
+    .contact {
+      background: linear-gradient(180deg,#ffffff,#fcfff8);
+      padding:16px;
+      border-radius:12px;
+      border:1px solid #f0f7f0;
+    }
+    .contact h3 { margin:0 0 8px 0; }
+    .form-row { display:flex; gap:8px; }
+    .field {
+      margin-bottom:10px;
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+    input[type="text"], input[type="email"], textarea, select {
+      padding:10px 12px;
+      border-radius:8px;
+      border:1px solid #e6eef6;
+      font-size:14px;
+      resize:vertical;
+    }
+    textarea { min-height:110px; }
+
+    .small { font-size:13px; color:var(--muted); }
+
+    .form-foot { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-top:8px; }
+    .status { font-size:13px; color:var(--muted); min-height:20px; }
+
+    /* Responsive */
+    @media (max-width:980px) {
+      .hero, .components { grid-template-columns: 1fr; }
+      nav.main-nav { display:none; }
+      .mobile-toggle { display:inline-flex; }
+      .cta { gap:8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="site" id="site">
+    <!-- HEADER -->
+    <header class="site-header" role="banner">
+      <a href="#" class="brand" aria-label="Orange Capitals Limited home">
+        <div class="logo" aria-hidden="true">OC</div>
+        <div class="title">
+          <span class="name">Orange Capitals</span>
+          <span class="tag">Investment & Advisory</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="#" aria-current="page">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="cta" role="toolbar" aria-label="Header actions">
+        <button class="btn btn-ghost" title="Sign in">Sign in</button>
+        <button class="btn btn-primary" id="getStarted">Get Started</button>
+        <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <!-- chevron-down icon -->
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile menu (simple) -->
+    <div id="mobileMenu" hidden aria-hidden="true" style="margin-top:10px;">
+      <nav style="display:flex; flex-direction:column; gap:6px;">
+        <a href="#" style="padding:10px 12px; border-radius:8px; text-decoration:none; color:var(--muted); background:linear-gradient(180deg,#fff,#fff);">Home</a>
+        <a href="#services" style="padding:10px 12px; border-radius:8px; text-decoration:none; color:var(--muted);">Services</a>
+        <a href="#about" style="padding:10px 12px; border-radius:8px; text-decoration:none; color:var(--muted);">About</a>
+        <a href="#contact" style="padding:10px 12px; border-radius:8px; text-decoration:none; color:var(--muted);">Contact</a>
+      </nav>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" role="region" aria-label="Hero">
+      <div class="hero-left">
+        <h1>Capital solutions that accelerate growth</h1>
+        <p>We provide tailored investment and advisory services to startups and enterprises. Strategy, capital raising, and operational support — designed to scale.</p>
+        <div class="hero-ctas">
+          <button class="btn btn-primary" id="ctaPrimary">Work with us</button>
+          <button class="btn btn-ghost" id="ctaSecondary">Learn more</button>
+        </div>
+      </div>
+
+      <aside class="hero-figure" aria-hidden="true">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div style="font-size:13px; color:var(--muted)">Key metrics</div>
+          <div style="font-size:12px; color:var(--muted)">Updated</div>
+        </div>
+
+        <div class="stats" style="margin-top:8px;">
+          <div class="stat">
+            <div class="num">120M</div>
+            <div class="lbl">Assets</div>
+          </div>
+          <div class="stat">
+            <div class="num">95%</div>
+            <div class="lbl">Retention</div>
+          </div>
+          <div class="stat">
+            <div class="num">30+</div>
+            <div class="lbl">Partners</div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px; font-size:13px; color:var(--muted)">Trusted by ambitious founders and institutions.</div>
+      </aside>
+    </section>
+
+    <!-- COMPONENTS: PRODUCT TOGGLE + CONTACT -->
+    <div class="components" style="align-items:start;">
+      <!-- Product toggle / accordion -->
+      <section class="accordion" id="services" aria-labelledby="servicesLabel" role="region">
+        <div class="acc-header">
+          <div>
+            <h2 id="servicesLabel" style="margin:0; font-size:16px;">Our products & services</h2>
+            <div class="small">Select a product to view details</div>
+          </div>
+          <div class="small">Open multiple</div>
+        </div>
+
+        <div class="acc-list" id="accordionList" data-behavior="multi">
+          <div class="acc-item">
+            <div class="row">
+              <div>
+                <div class="title">Growth Capital</div>
+                <div class="small">Equity and structured capital for scaling companies</div>
+              </div>
+              <button class="toggle-btn" aria-expanded="false" aria-controls="p1" style="margin-left:auto">
+                <span class="sr-only">Toggle Growth Capital</span>
+                <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div id="p1" class="acc-panel" role="region" aria-labelledby="" aria-hidden="true" hidden>
+              <p>We provide stage-appropriate capital with mentorship and strategic introductions to accelerate revenue and product-market fit.</p>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <div class="row">
+              <div>
+                <div class="title">Advisory & M&A</div>
+                <div class="small">Strategic advisory for transactions and growth initiatives</div>
+              </div>
+              <button class="toggle-btn" aria-expanded="false" aria-controls="p2" style="margin-left:auto">
+                <span class="sr-only">Toggle Advisory & M&A</span>
+                <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div id="p2" class="acc-panel" role="region" aria-labelledby="" aria-hidden="true" hidden>
+              <p>We support due diligence, valuations, and deal execution alongside founders to maximize outcomes and minimize friction.</p>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <div class="row">
+              <div>
+                <div class="title">Operational Support</div>
+                <div class="small">Hands-on operations, finance, and GTM support</div>
+              </div>
+              <button class="toggle-btn" aria-expanded="false" aria-controls="p3" style="margin-left:auto">
+                <span class="sr-only">Toggle Operational Support</span>
+                <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div id="p3" class="acc-panel" role="region" aria-labelledby="" aria-hidden="true" hidden>
+              <p>From finance to hiring and GTM, our operators help set processes and KPIs to scale efficiently and sustainably.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact form -->
+      <aside id="contact" class="contact" role="region" aria-labelledby="contactLabel">
+        <h3 id="contactLabel">Contact us</h3>
+        <div class="small" style="margin-bottom:10px;">Fill the form and we'll get back within 2 business days.</div>
+
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="name" class="small">Full name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+            <div class="invalid small" id="err-name" aria-hidden="true" style="color:#b91c1c; display:none;">Please enter your name</div>
+          </div>
+
+          <div class="field">
+            <label for="email" class="small">Email</label>
+            <input id="email" name="email" type="email" placeholder="jane@company.com" required />
+            <div class="invalid small" id="err-email" aria-hidden="true" style="color:#b91c1c; display:none;">Please enter a valid email</div>
+          </div>
+
+          <div class="field">
+            <label for="service" class="small">Interested in</label>
+            <select id="service" name="service" aria-label="Service of interest">
+              <option value="growth">Growth Capital</option>
+              <option value="advisory">Advisory & M&A</option>
+              <option value="ops">Operational Support</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message" class="small">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us a bit about your company or inquiry..." required></textarea>
+            <div class="invalid small" id="err-message" aria-hidden="true" style="color:#b91c1c; display:none;">Please enter a short message</div>
+          </div>
+
+          <div class="form-foot">
+            <div class="status" id="formStatus" aria-live="polite"></div>
+            <div style="display:flex; gap:8px;">
+              <button type="reset" class="btn btn-ghost">Reset</button>
+              <button type="submit" class="btn btn-primary">Send message</button>
+            </div>
+          </div>
+        </form>
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer style="margin-top:18px; text-align:center; color:var(--muted); font-size:13px;">
+      © <span id="year"></span> Orange Capitals Limited — recreated components demo.
+    </footer>
+  </div>
+
+  <script>
+    // Header mobile menu toggle
+    (function () {
+      const mobileToggle = document.getElementById('mobileToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileToggle.addEventListener('click', () => {
+        const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+        mobileToggle.setAttribute('aria-expanded', String(!expanded));
+        if (expanded) {
+          mobileMenu.hidden = true;
+          mobileMenu.setAttribute('aria-hidden', 'true');
+        } else {
+          mobileMenu.hidden = false;
+          mobileMenu.setAttribute('aria-hidden', 'false');
+        }
+      });
+    })();
+
+    // Accordion (product toggle) behavior: multi-open by default
+    (function () {
+      const list = document.getElementById('accordionList');
+      const items = Array.from(list.querySelectorAll('.acc-item'));
+      items.forEach((item, idx) => {
+        const btn = item.querySelector('.toggle-btn');
+        const panel = item.querySelector('.acc-panel');
+        const panelId = btn.getAttribute('aria-controls');
+        // link aria-labelledby for screen readers
+        panel.setAttribute('aria-labelledby', btn.id || '');
+        // ensure hidden by default
+        panel.hidden = true;
+        panel.setAttribute('aria-hidden', 'true');
+
+        // click toggle
+        btn.addEventListener('click', (e) => {
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+          if (isOpen) {
+            // close
+            btn.setAttribute('aria-expanded', 'false');
+            panel.setAttribute('aria-hidden', 'true');
+            // collapse smoothly
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            requestAnimationFrame(() => {
+              panel.style.maxHeight = '0px';
+              panel.classList.remove('open');
+            });
+            const handler = (ev) => {
+              if (ev.propertyName && ev.propertyName.indexOf('max-height') === -1) return;
+              panel.hidden = true;
+              panel.removeEventListener('transitionend', handler);
+            };
+            panel.addEventListener('transitionend', handler);
+          } else {
+            // open
+            btn.setAttribute('aria-expanded', 'true');
+            panel.hidden = false;
+            panel.setAttribute('aria-hidden', 'false');
+            const full = panel.scrollHeight;
+            panel.style.maxHeight = full + 'px';
+            panel.classList.add('open');
+          }
+        });
+
+        // keyboard support on button
+        btn.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            btn.click();
+          }
+        });
+      });
+    })();
+
+    // Contact form validation + fake submit
+    (function () {
+      const form = document.getElementById('contactForm');
+      const status = document.getElementById('formStatus');
+      const year = document.getElementById('year');
+      year.textContent = new Date().getFullYear();
+
+      function showError(id, show, text) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.style.display = show ? 'block' : 'none';
+        el.setAttribute('aria-hidden', String(!show));
+        if (show && text) el.textContent = text;
+      }
+
+      function validEmail(e) {
+        return /^\S+@\S+\.\S+$/.test(e);
+      }
+
+      form.addEventListener('submit', (ev) => {
+        ev.preventDefault();
+        status.textContent = '';
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+
+        let ok = true;
+        if (!name) { showError('err-name', true); ok = false; } else showError('err-name', false);
+        if (!email || !validEmail(email)) { showError('err-email', true); ok = false; } else showError('err-email', false);
+        if (!message || message.length < 10) { showError('err-message', true); ok = false; } else showError('err-message', false);
+
+        if (!ok) {
+          status.textContent = 'Please fix the errors above.';
+          return;
+        }
+
+        // Simulate submit
+        status.textContent = 'Sending…';
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          status.textContent = 'Thanks — your message has been received. We will respond within 2 business days.';
+          form.reset();
+        }, 1000);
+      });
+
+      // Reset errors on input
+      form.addEventListener('input', (e) => {
+        const id = e.target.id;
+        if (id === 'name') showError('err-name', false);
+        if (id === 'email') showError('err-email', false);
+        if (id === 'message') showError('err-message', false);
+      });
+
+      // Reset button clears status
+      form.addEventListener('reset', () => {
+        status.textContent = '';
+        showError('err-name', false); showError('err-email', false); showError('err-message', false);
+      });
+    })();
+  </script>
+</body>
+</html>
