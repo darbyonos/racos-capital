@@ -134,7 +134,9 @@ body{
    justify-content: center;
 }
 .follow-step h1{
-  font-size: 40px;
+   font-size: 30px;
+  line-height: 30px;
+  font-weight: 500;
   padding-left: 10px;
 }
 .step{
@@ -674,3 +676,4 @@ body{
 }
 
 }
+
