@@ -136,7 +136,8 @@ body{
 }
 .follow-step h1{
   font-size: 40px;
-  line-height: 40px;
+  line-height: 30px;
+  padding-left: 10px;
 }
 .step{
   font-size:18px;
@@ -676,4 +677,5 @@ body{
   color: rgb(7, 7, 95);
 
 }
+
 }
