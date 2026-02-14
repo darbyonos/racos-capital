@@ -135,6 +135,7 @@ body{
 }
 .follow-step h1{
   font-size: 40px;
+  padding-left: 10px;
 }
 .step{
   font-size:18px;
@@ -173,7 +174,7 @@ body{
 }
 @media(max-width:600px){
   .follow-step h1{
-  font-size: 25px;
+  font-size: 20px;
 }
 .step{
   font-size:18px;
@@ -207,7 +208,7 @@ body{
 }
 @media(max-width:768px){
   .follow-step h1{
-  font-size:25px;
+  font-size:20px;
 }
 .step{
   font-size:18px;
@@ -240,8 +241,7 @@ body{
 }
 @media(max-width:980px){
   .follow-step h1{
-  font-size: 25px;
-  padding-left: 10px;
+  font-size: 20px;
 }
 .step{
   font-size:18px;
@@ -672,4 +672,5 @@ body{
   color: rgb(7, 7, 95);
 
 }
+
 }
