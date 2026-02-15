@@ -960,7 +960,6 @@ nav .fa{
 @media(max-width:600px){
     .discuss-div{
         flex-direction: column;
-        margin-left: 13px;
     }
     .discuss-div h2{
         text-align: start;
@@ -990,7 +989,6 @@ nav .fa{
 @media(max-width:768px){
     .discuss-div{
         flex-direction: column;
-        margin-left: 13px;
     }
      .discuss-div h2{
         text-align:start;
@@ -1018,7 +1016,6 @@ nav .fa{
 @media(max-width:980px){
     .discuss-div{
         flex-direction: column;
-        margin-left: 13px;
     }
       .discuss-div h2{
         text-align:start;
@@ -1233,3 +1230,4 @@ nav .fa{
     }
    
     
+
