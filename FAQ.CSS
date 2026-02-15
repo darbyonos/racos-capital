@@ -27,18 +27,7 @@ body{
   transition: 0.3s;
 
 }
-.FAQ button{
-  padding: 15px 60px;
-  margin-left:80px;
-  border: none;
-  border-radius: 50px;
-  font-weight: bold;
-  background: rgb(7, 7, 95);
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+
 .FAQ button:hover{
   background-color: black;
 }
@@ -59,7 +48,8 @@ body{
 }
 .tabcontent{
   display: block;
-  padding:6px 12px;
+  padding-bottom: 20px;
+  padding-top: 15px;
   text-align:center;
   background-color:rgb(7, 7, 95);
   margin-top: 10px;
@@ -67,10 +57,11 @@ body{
 }
 .tabcontent-one{
   display: block;
-  padding:6px 12px;
+  padding-bottom: 20px;
+  padding-top: 15px;
   text-align:center;
   background-color: rgb(7, 7, 95);
-  margin-top: 10px;
+  margin-top: 0px;
 }
 .tabcontent h1{
   font-size: 40px;
@@ -169,7 +160,7 @@ body{
   font-size: 14px;
 }
   .panel {
-  padding: 0 px;
+  padding: 0px;
   display: none;
   width: 80%;
   font-size: 14px;
@@ -200,19 +191,19 @@ body{
   .tabcontent{
   display: block;
   width: 100%;
-  padding:6px 12px;
+  padding-bottom: 20px;
+  padding-top: 15px;
   text-align:center;
   background-color:rgb(7, 7, 95);
-  margin-top: 10px;
   
 }
   .tabcontent-one{
   display: block;
   width: 100%;
-  padding:6px 12px;
+  padding-bottom: 20px;
+  padding-top: 15px;
   text-align:center;
   background-color:rgb(7, 7, 95);
-  margin-top: 10px;
   
 }
   .FAQ h1{
@@ -224,12 +215,12 @@ body{
   padding-top: 90px;
 }
 .FAQ button{
-  padding: 13px 20px;
+  padding: 0px;
   margin: 0px;
   border: none;
   border-radius: 50px;
   font-weight: bold;
-  margin-left: 20px;
+  margin-left: 0px;
   font-size: 12px;
   background: rgb(7, 7, 95);
   color: white;
@@ -243,14 +234,8 @@ body{
 .tabcontent h1{
   font-size: 21px;
 }
-.tabcontent{
-  margin-top: 10px;
-}
 .tabcontent-one h1{
   font-size: 21px;
-}
-.tabcontent-one{
-  margin-top: 10px;
 }
 }
 
@@ -267,7 +252,7 @@ body{
   transition: background-color 0.6s ease;
 }
   .panel {
-  padding: 0 px;
+  padding: 0px;
   display: none;
   width: 80%;
   font-weight: 400;
@@ -302,19 +287,19 @@ body{
   .tabcontent{
   display: block;
   width: 100%;
-  padding:6px 12px;
+  padding-bottom: 20px;
+  padding-top: 15px;
   text-align:center;
   background-color:rgb(7, 7, 95);
-  margin-top: 10px;
   
 }
   .tabcontent-one{
   display:block;
   width: 100%;
-  padding:6px 12px;
+  padding-bottom: 20px;
+  padding-top: 15px;
   text-align:center;
   background-color:rgb(7, 7, 95);
-  margin-top: 10px;
   
 }
   .FAQ h1{
@@ -326,12 +311,12 @@ body{
   padding-top: 90px;
 }
 .FAQ button{
-  padding: 13px 20px;
+  padding:0px;
   margin: 0px;
   border: none;
   border-radius: 50px;
   font-weight: bold;
-  margin-left: 20px;
+  margin-left: 0px;
   font-size: 12px;
   background: rgb(7, 7, 95);
   color: white;
@@ -346,16 +331,11 @@ body{
   font-size:21px;
   color: white;
 }
-.tabcontent{
-  margin-top: 10px;
-}
 .tabcontent-one h1{
   font-size: 21px;
   color: white;
 }
-.tabcontent-one{
-  margin-top: 10px;
-}
+
 }
 
 
@@ -407,19 +387,19 @@ body{
   .tabcontent{
   display: block;
   width: 100%;
-  padding:6px 12px;
+  padding-bottom: 20px;
+  padding-top: 15px;
   text-align:center;
   background-color:rgb(7, 7, 95);
-  margin-top: 10px;
   
 }
   .tabcontent-one{
   display: block;
   width: 100%;
-  padding:6px 12px;
+  padding-bottom: 20px;
+  padding-top: 15px;
   text-align:center;
   background-color:rgb(7, 7, 95);
-  margin-top: 10px;
   
 }
   .FAQ h1{
@@ -431,12 +411,12 @@ body{
   padding-top: 90px;
 }
 .FAQ button{
-  padding: 13px 20px;
+  padding:0px;
   margin: 0px;
   border: none;
   border-radius: 50px;
   font-weight: bold;
-  margin-left: 20px;
+  margin-left: 0px;
   font-size: 12px;
   background: rgb(7, 7, 95);
   color: white;
@@ -450,14 +430,8 @@ body{
 .tabcontent h1{
   font-size:21px;
 }
-.tabcontent{
-  margin-top: 10px;
-}
 .tabcontent-one h1{
   font-size: 21px;
-}
-.tabcontent-one{
-  margin-top: 10px;
 }
 }
 @media(max-width:980px){
@@ -508,19 +482,20 @@ body{
   .tabcontent{
   display: block;
   width: 100%;
-  padding:6px 12px;
+  padding-bottom: 20px;
+  padding-top: 15px;
   text-align:center;
   background-color:rgb(7, 7, 95);
-  margin-top: 10px;
+
   
 }
   .tabcontent-one{
   display: block;
   width: 100%;
-  padding:6px 12px;
+  padding-bottom: 20px;
+  padding-top: 15px;
   text-align:center;
   background-color: rgb(7, 7, 95);
-  margin-top: 10px;
   
 }
   .FAQ h1{
@@ -537,7 +512,7 @@ body{
   border: none;
   border-radius: 50px;
   font-weight: bold;
-  margin-left: 20px;
+  margin-left: 0px;
   font-size: 12px;
   background: rgb(7, 7, 95);
   color: white;
@@ -551,205 +526,7 @@ body{
 .tabcontent h1{
   font-size: 21px;
 }
-.tabcontent{
-  margin-top: 10px;
-}
 .tabcontent-one h1{
   font-size: 21px;
 }
-.tabcontent-one{
-  margin-top: 10px;
 }
-}
-
-
-.last-image{
-    margin-top: 20px;
-    width:100px;
-}
-.last-sec{
-    display: flex;
-    background-color: rgb(50, 49, 49);
-    flex-direction: row;
-    justify-content:space-around;
-    color: white;
-    width: 100%;
-}
-.row-sec{
-    display: flex;
-    background-color: rgb(50, 49, 49);
-    flex-direction: row;
-    justify-content:space-around;
-    color: white;
-    width: 100%;
-}
-.useful-div{
-    display: flex;
-}
-.about-div{
-    margin-right:50px;
-}
-.row-sec p{
-    cursor: pointer;
-    font-size: 16px;
-}
-.make-pag{
-    line-height: 25px;
-}
-.useful-div p:hover,.useful p:hover{
-    color: rgb(63, 63, 153);
-}
-.about-div a{
-    text-decoration: none;
-    color: white;
-}
-.about-div a:hover{
-    color: rgb(63, 63, 153);
-}
-.ho-about a{
-    text-decoration: none;
-    color: white;
-}
-.ho-about a:hover{
-    color: rgb(63, 63, 153);
-}
-
-
-@media(max-width:600px){
-     .row-sec{
-        flex-direction: column;
-        padding-left: 10px;
-     }
-     .about-div{
-      margin-right:28px;
-     }
-     .useful-div h1,.useful h1{
-        font-size: 20px;
-        font-weight: bold;
-        padding-left: 10px;
-     }
-     .row-sec p{
-    cursor: pointer;
-    font-size: 15px;
-    margin: 0px;
-    padding: 0px;
-    padding-left: 10px;
-    }
-    .useful p{
-        padding: 0px;
-        margin: 0px;
-    }
-    }
-    @media(max-width:768px){
-     .row-sec{
-        flex-direction: column;
-        padding-left: 10px;
-     }
-     .about-div{
-      margin-right:28px;
-     }
-     .useful-div h1,.useful h1{
-        font-size: 20px;
-        font-weight: bold;
-        padding-left: 10px;
-     }
-     .row-sec p{
-    cursor: pointer;
-    font-size: 15px;
-    margin: 0px;
-    padding: 0px;
-    padding-left: 10px;
-    }
-    .useful p{
-        padding: 0px;
-        margin: 0px;
-    }
-    }
-    @media(max-width:980px){
-     .row-sec{
-        flex-direction: column;
-        padding-left: 10px;
-     }
-     .useful-div h1,.useful h1{
-        font-size: 20px;
-        font-weight: bold;
-        padding-left:10px;
-     }
-    .about-div{
-      margin-right:28px;
-     }
-     .row-sec p{
-    cursor: pointer; 
-    font-size: 15px; 
-     padding: 0px;
-    padding-left:10px;
-    }
-    .useful p{
-        padding: 0px;
-        margin: 0px;
-    }
-  }
-    .copy-div{
-      display: flex;
-      background-color: rgb(50, 49, 49);
-      justify-content:center; 
-      border-top: 1px solid grey;
-      width: 100%;
-      padding: 0px;
-      margin-right: 0px;
-
-    }
-    
-    .copy-div p{
-        padding-top: 8px;
-        padding-bottom: 8px;
-        color: gray;
-        font-weight:normal;
-        font-size: 12px;
-    }
-
-     @media(max-width:600px){
-    .copy-div p{
-        padding-top: 8px;
-        padding-bottom: 8px;
-        color: gray;
-        font-weight:normal;
-        font-size: 12px;
-    }
-    }
-    
-    @media(max-width:768px){
-    .copy-div p{
-        padding-top: 8px;
-        padding-bottom: 8px;
-        color: gray;
-        font-weight:normal;
-        font-size: 12px;
-    }
-    }
-     @media(max-width:980px){
-    .copy-div p{
-        color: gray;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        font-weight:normal;
-        font-size: 12px;
-    }
-    }
-    .chev:hover{
-        color: blue;
-    }
-    .chev { 
-        width:16px;
-        height:12px;
-        color:var(--orange); 
-        transition:transform .22s ease; 
-        flex-shrink:0; 
-    }
-    .toggle-btn[ aria-expanded="true"]
-
-    .chev { 
-        transform: rotate(180deg); 
-    }
-   
-    
