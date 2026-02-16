@@ -182,6 +182,7 @@
             color: white;
             border: none;
             padding: 16px;
+            margin-left: 10px;
             border-radius: 12px;
             font-size: 18px;
             font-weight: 500;
@@ -225,6 +226,7 @@
             .form-container {
                 padding: 30px 45px;
                 margin-top: 0px;
+                padding-left: 12px;
             }
             
             .form-row {
@@ -245,7 +247,8 @@
         @media (max-width: 768px) {
             .form-container {
                 padding: 30px 45px;
-                 margin-top: 0px;
+                margin-top: 0px;
+                padding-left: 12px;
             }
             
             .form-row {
@@ -267,7 +270,8 @@
         @media (max-width: 980px) {
             .form-container {
                 padding: 30px 45px;
-                 margin-top: px;
+                margin-top: px;
+                padding-left: 12px;
                 
             }
             
@@ -486,4 +490,5 @@
 
 
     }
+
 
