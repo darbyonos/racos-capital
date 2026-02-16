@@ -1,7 +1,6 @@
 body {
-    padding: 0;
-    margin: 0;
-    font-family: "Roboto", sans-serif;
+ font-family: "Roboto", sans-serif;
+ margin: 0PX;
 }
 
 .sidenav {
@@ -39,12 +38,12 @@ body {
 }
 .color-racos{
   color: rgb(7, 7, 95);
-  text-decoration: none;
 }
 .main p{
- line-height: 27PX;
+ line-height: 25PX;
  font-size: 17px;
- font-weight: 400;
+ font-weight:none;
+ margin: 0px;
 }
 .dot {
   cursor: pointer;
@@ -72,9 +71,9 @@ body {
 }
 .identity p{
   margin: 0px;
-   line-height: 28px;
-   font-size: 17px;
-   font-weight: 400;
+   line-height:25px;
+  font-size: 17px;
+ font-weight:none;
 }
 .mai{
   text-decoration: none;
@@ -87,19 +86,31 @@ body {
   padding-top: 20px;
   padding-bottom: 80px;
 }
+.Last-identity h2{
+  line-height: 30px;
+  padding-left: 6px;
+}
+.identity h2{
+  line-height: 30px;
+  padding-left: 6px;
+}
+.main h2{
+  line-height: 30px;
+  padding-left: 6px;
+}
 .Last-identity p{
   margin: 0px;
-  line-height: 28px;
-  font-size: 17px;
-  font-weight: 400;
+  line-height: 25px;
+ font-size: 17px;
+ font-weight: none;
 }
-.condition-btn{
+.privacy-btn{
   height: 60px;
   border-radius: 30px;
   background: rgb(7, 7, 95);
   color: white;
   font-weight: bold;
-  margin-top: 40px;
+  font-size: 14px;
   width: 200px;
   border: none;
   transition: 0.15s;
@@ -108,13 +119,10 @@ body {
   background: black;
   color: white;
 }
-.condition-btn:hover{
-  background: black;
-  color: white;
-}
 .div-pri{
   display: flex;
-  padding-bottom: 70px;
+  padding-bottom: 30px;
+  padding-top: 30px;
   justify-content: center;
 }
 .div-pri a{
@@ -124,7 +132,7 @@ body {
 
 @media screen and (max-height: 450px) {
   .sidenav {
-    padding-top: 15px;
+    display: none;
   }
   .sidenav a {font-size: 18px;}
   .main h2{
@@ -133,63 +141,84 @@ body {
 }
 @media(max-width:600px){
   .main h2{
-  font-size:22px;
+  font-size:20px;
+}
+.identity h2{
+  font-size: 20px;
 }
   .sidenav {
     display: none;
   }
-  .condition-btn{
-    margin-top: 55px;
-  }
   .main{
-    width: 100%;
+    margin-right: 0px;
+    padding: 0px;
+    padding-top: 80px;
   }
   .identity{
-    width: 100%;
+    margin-right: 0px;
+    padding: 0px;
   }
+  .Last-identity h2{
+  font-size: 20px;
+}
   .Last-identity{
-    width: 100%;
+    margin-right: 0px;
+    padding: 0px;
   }
 }
 
 @media(max-width:768px){
   .main h2{
-  font-size:22px;
+  font-size:20px;
 }
   .sidenav {
     display: none;
   }
   .main{
-    width: 100%;
+    margin-right: 0px;
+    padding: 0px;
+    padding-top: 80px;
   }
-  .condition-btn{
-    margin-top: 55px;
-  }
+  .Last-identity h2{
+  font-size: 20px;
+}
+  .identity h2{
+  font-size: 20px;
+}
   .identity{
-    width: 100%;
+    margin-right: 0px;
+    padding: 0px;
   }
   .Last-identity{
-    width: 100%;
+    margin-right: 0px;
+    padding: 0px;
   }
 }
 
 @media(max-width:980px){
   .main h2{
-  font-size:22px;
+  font-size:20px;
 }
   .sidenav {
     display: none;
   }
   .main{
-    width: 100%;
+    margin-right: 0px;
+    padding: 0px;
+    padding-top: 80px;
   }
-    .condition-btn{
-    margin-top: 55px;
-  }
+  .identity h2{
+  font-size: 20px;
+}
+.Last-identity h2{
+  font-size: 20px;
+}
   .identity{
-    width: 100%;
+    margin-right: 0px;
+    padding: 0px;
   }
   .Last-identity{
-    width: 100%;
+    margin-right: 0px;
+    padding: 0px;
   }
 }
